@@ -1,0 +1,33 @@
+object FProgress: TFProgress
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'FProgress'
+  ClientHeight = 73
+  ClientWidth = 405
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbl1: TLabel
+    Left = 24
+    Top = 24
+    Width = 26
+    Height = 19
+    Alignment = taCenter
+    Caption = 'lbl1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+end

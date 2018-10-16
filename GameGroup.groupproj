@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9C249E54-7DE1-411C-83C2-A122446BEF7F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="GameClient\Dpr\GameAssistant.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GameClientLicense\GameLicense.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GameAssistant">
+        <MSBuild Projects="GameClient\Dpr\GameAssistant.dproj"/>
+    </Target>
+    <Target Name="GameAssistant:Clean">
+        <MSBuild Projects="GameClient\Dpr\GameAssistant.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameAssistant:Make">
+        <MSBuild Projects="GameClient\Dpr\GameAssistant.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GameLicense">
+        <MSBuild Projects="GameClientLicense\GameLicense.dproj"/>
+    </Target>
+    <Target Name="GameLicense:Clean">
+        <MSBuild Projects="GameClientLicense\GameLicense.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GameLicense:Make">
+        <MSBuild Projects="GameClientLicense\GameLicense.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GameAssistant;GameLicense"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GameAssistant:Clean;GameLicense:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GameAssistant:Make;GameLicense:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">消息抓取</string>
+    <string name="service_name">wx捕捉微信消息</string>
+    <string name="service_desc">通过通知栏消息抓取微信消息</string>
+</resources>

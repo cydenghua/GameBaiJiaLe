@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dcode.wxnotification.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layout_control_accessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:textColor="#858585"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="20dp"
+            android:orientation="vertical">
+            <ImageView android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/layout_control_accessibility_icon"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@mipmap/ic_start"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开启插件"
+                android:id="@+id/layout_control_accessibility_text"
+                android:layout_margin="5dp"
+                android:textColor="#dfaa6a" android:textStyle="bold" android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_control_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:textColor="#858585"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="20dp"
+            android:orientation="vertical">
+            <ImageView android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/layout_control_set_icon"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/btn_zoom_page_press"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统设置"
+                android:id="@+id/layout_control_set_text"
+                android:layout_margin="5dp"
+                android:textColor="#dfaa6a" android:textStyle="bold" android:textSize="16sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>
